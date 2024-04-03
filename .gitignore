@@ -13,6 +13,7 @@ dist
 elk-translation-status.json
 bin
 obj
+*sln.DotSettings.user
 
 public/emojis
 

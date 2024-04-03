@@ -5,7 +5,7 @@ using System.IO;
 using UsingOData;
 
 //Sleep in order to wait for the web service to start
-Thread.Sleep(10000);
+// Thread.Sleep(10000);
 
 var client = new ODataClient("https://localhost:7004/odata/");
 
@@ -14,3 +14,8 @@ var companies = await client
     .Top(2)
     .Skip(1)
     .FindEntriesAsync();
+
+foreach (var company in companies)
+{
+    Console.Out.Write(company.Name);
+}

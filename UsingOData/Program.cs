@@ -24,7 +24,8 @@ builder.Services.AddControllers()
         .Expand()
     );
 
-builder.Services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase(databaseName: "CompaniesDB"));
+builder.Services
+    .AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase(databaseName: "CompaniesDB"));
 
 builder.Services.AddScoped<ICompanyRepo, CompanyRepo>();
 
