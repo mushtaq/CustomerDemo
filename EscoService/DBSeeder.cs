@@ -2,7 +2,7 @@
 {
     public class DBSeeder
     {
-        public static void AddCompaniesData(WebApplication app)
+        public static void AddEscos(WebApplication app)
         {
             var scope = app.Services.CreateScope();
             var db = scope.ServiceProvider.GetService<ApiContext>();
@@ -44,7 +44,7 @@
                 {
                     ID = 1,
                     CustomerId = 1,
-                    Name = "Product A",
+                    Name = "Customer A",
                     Price = 10
                 });
 
@@ -53,7 +53,7 @@
                 {
                     ID = 2,
                     CustomerId = 1,
-                    Name = "Product B",
+                    Name = "Customer B",
                     Price = 35
                 });
 
@@ -62,7 +62,7 @@
                 {
                     ID = 3,
                     CustomerId = 2,
-                    Name = "Product C",
+                    Name = "Customer C",
                     Price = 22
                 });
 
@@ -71,7 +71,7 @@
                 {
                     ID = 4,
                     CustomerId = 2,
-                    Name = "Product D",
+                    Name = "Customer D",
                     Price = 15
                 });
 
@@ -80,7 +80,7 @@
                 {
                     ID = 5,
                     CustomerId = 3,
-                    Name = "Product E",
+                    Name = "Customer E",
                     Price = 103
                 });
 
@@ -89,7 +89,7 @@
                 {
                     ID = 6,
                     CustomerId = 3,
-                    Name = "Product F",
+                    Name = "Customer F",
                     Price = 135
                 });
 
@@ -98,7 +98,7 @@
                 {
                     ID = 7,
                     CustomerId = 4,
-                    Name = "Product G",
+                    Name = "Customer G",
                     Price = 76
                 });
 
@@ -107,7 +107,7 @@
                 {
                     ID = 8,
                     CustomerId = 4,
-                    Name = "Product H",
+                    Name = "Customer H",
                     Price = 33
                 });
 

@@ -31,7 +31,7 @@ namespace EscoIntegrationTests
         
 
         [Test]
-        public async Task WhenQueringForAllCompanies_ThenThreeCompaniesAreReturned()
+        public async Task WhenQueringForAllEscos_ThenThreeEscosAreReturned()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7004/odata/Escos");
             var response = await _httpClient.SendAsync(request);
@@ -52,7 +52,7 @@ namespace EscoIntegrationTests
         }
 
         [Test]
-        public async Task WhenQueringForACompany_ThenTheCorrectCompanyIsReturned()
+        public async Task WhenQueringForAnEsco_ThenTheCorrectCompanyIsReturned()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7004/odata/Escos(2)");
             var response = await _httpClient.SendAsync(request);
@@ -64,7 +64,7 @@ namespace EscoIntegrationTests
         }
 
         [Test]
-        public async Task WhenSkippingOneCompany_ThenTheNextThreeCompaniesAreReturned()
+        public async Task WhenSkippingOneCompany_ThenTheNextThreeEscosAreReturned()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7004/odata/Escos?$skip=1");
             var response = await _httpClient.SendAsync(request);
@@ -85,7 +85,7 @@ namespace EscoIntegrationTests
         }
 
         [Test]
-        public async Task WhenSkippingOneAndAskingForTwo_ThenTheNextTwoCompaniesAreReturned()
+        public async Task WhenSkippingOneAndAskingForTwo_ThenTheNextTwoEscosAreReturned()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7004/odata/Escos?$top=2&$skip=1");
             var response = await _httpClient.SendAsync(request);
@@ -118,7 +118,7 @@ namespace EscoIntegrationTests
         }
 
         [Test]
-        public async Task WhenFilteringByCompanySize_ThenCorrectCompaniesAreReturned()
+        public async Task WhenFilteringByCompanySize_ThenCorrectEscosAreReturned()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7004/odata/Escos?$filter=Size gt 50");
             var response = await _httpClient.SendAsync(request);

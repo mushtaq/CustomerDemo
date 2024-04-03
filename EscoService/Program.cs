@@ -35,7 +35,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-DBSeeder.AddCompaniesData(app);
+DBSeeder.AddEscos(app);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

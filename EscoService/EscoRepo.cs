@@ -7,7 +7,7 @@ namespace EscoService
         public IQueryable<Esco> GetAll()
         {
             return context.Escos
-                .Include(a => a.Products)
+                .Include(a => a.Customers)
                 .AsQueryable();
 
         }
@@ -15,7 +15,7 @@ namespace EscoService
         public IQueryable<Esco> GetById(int id)
         {
             return context.Escos
-                .Include(a => a.Products)
+                .Include(a => a.Customers)
                 .AsQueryable()
                 .Where(c => c.ID == id);
         }
