@@ -2,12 +2,12 @@ using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
-using UsingOData;
+using EscoService;
 
 static IEdmModel GetEdmModel()
 {
     ODataConventionModelBuilder builder = new();
-    builder.EntitySet<Company>("Companies");
+    builder.EntitySet<Esco>("Escos");
     return builder.GetEdmModel();
 }
 
@@ -25,9 +25,9 @@ builder.Services.AddControllers()
     );
 
 builder.Services
-    .AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase(databaseName: "CompaniesDB"));
+    .AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase(databaseName: "CustomerDb"));
 
-builder.Services.AddScoped<ICompanyRepo, CompanyRepo>();
+builder.Services.AddScoped<IEscoRepo, EscoRepo>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingOData", "UsingOData\UsingOData.csproj", "{E674AA32-4CDA-48EA-A4D1-62BE86DFA39F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EscoService", "EscoService\EscoService.csproj", "{E674AA32-4CDA-48EA-A4D1-62BE86DFA39F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingODataIntegrationTests", "UsingODataUnitTests\UsingODataIntegrationTests.csproj", "{69B8DDE7-D02C-48D9-938C-11BDD338BCAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EscoIntegrationTests", "UsingODataUnitTests\EscoIntegrationTests.csproj", "{69B8DDE7-D02C-48D9-938C-11BDD338BCAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingODataClient", "UsingODataClient\UsingODataClient.csproj", "{E90BC450-716D-4BDB-A8BB-FB8BA2E8DFFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscoClient", "EscoClient\EscoClient.csproj", "{E90BC450-716D-4BDB-A8BB-FB8BA2E8DFFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

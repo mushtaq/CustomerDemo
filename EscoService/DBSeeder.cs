@@ -1,4 +1,4 @@
-﻿namespace UsingOData
+﻿namespace EscoService
 {
     public class DBSeeder
     {
@@ -7,114 +7,112 @@
             var scope = app.Services.CreateScope();
             var db = scope.ServiceProvider.GetService<ApiContext>();
 
-            db?.Companies.Add(
-                new Company()
+            db?.Escos.Add(
+                new Esco()
                 {
                     ID = 1,
                     Name = "Company A",
                     Size = 25
                 });
 
-            db.Companies.Add(
-                new Company()
+            db?.Escos.Add(
+                new Esco()
                 {
                     ID = 2,
                     Name = "Company B",
                     Size = 56
                 });
 
-            db.Companies.Add(
-                new Company()
+            db?.Escos.Add(
+                new Esco()
                 {
                     ID = 3,
                     Name = "Company C",
                     Size = 12
                 });
 
-            db.Companies.Add(
-                new Company()
+            db?.Escos.Add(
+                new Esco()
                 {
                     ID = 4,
                     Name = "Company D",
                     Size = 205
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 1,
-                    CompanyID = 1,
+                    CustomerId = 1,
                     Name = "Product A",
                     Price = 10
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 2,
-                    CompanyID = 1,
+                    CustomerId = 1,
                     Name = "Product B",
                     Price = 35
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 3,
-                    CompanyID = 2,
+                    CustomerId = 2,
                     Name = "Product C",
                     Price = 22
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 4,
-                    CompanyID = 2,
+                    CustomerId = 2,
                     Name = "Product D",
                     Price = 15
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 5,
-                    CompanyID = 3,
+                    CustomerId = 3,
                     Name = "Product E",
                     Price = 103
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 6,
-                    CompanyID = 3,
+                    CustomerId = 3,
                     Name = "Product F",
                     Price = 135
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 7,
-                    CompanyID = 4,
+                    CustomerId = 4,
                     Name = "Product G",
                     Price = 76
                 });
 
-            db.Products.Add(
-                new Product()
+            db?.Customers.Add(
+                new Customer()
                 {
                     ID = 8,
-                    CompanyID = 4,
+                    CustomerId = 4,
                     Name = "Product H",
                     Price = 33
                 });
 
-            db.SaveChanges();
+            db?.SaveChanges();
         }
 
     }
 }
-
-

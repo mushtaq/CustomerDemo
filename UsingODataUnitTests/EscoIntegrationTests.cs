@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 
-namespace UsingODataIntegrationTests
+namespace EscoIntegrationTests
 {
-    public class UsingODataIntegrationTests
+    public class EscoIntegrationTests
     {
         private HttpClient _httpClient;
         private WebApplicationFactory<Program> _application;
 
-        public UsingODataIntegrationTests()
+        public EscoIntegrationTests()
         {
             _application = new WebApplicationFactory<Program>();
             _httpClient = _application.CreateClient();
@@ -37,7 +37,7 @@ namespace UsingODataIntegrationTests
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
-            dynamic json = JsonConvert.DeserializeObject(responseString);
+            dynamic json = JsonConvert.DeserializeObject(responseString)!;
             Assert.Equals(json.value.Count, 3);
 
             dynamic id = json.value[0].ID.ToString();
@@ -58,7 +58,7 @@ namespace UsingODataIntegrationTests
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
-            dynamic json = JsonConvert.DeserializeObject(responseString);
+            dynamic json = JsonConvert.DeserializeObject(responseString)!;
             Assert.Equals(json.ID.ToString(), "2");
         }
 
@@ -70,7 +70,7 @@ namespace UsingODataIntegrationTests
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
-            dynamic json = JsonConvert.DeserializeObject(responseString);
+            dynamic json = JsonConvert.DeserializeObject(responseString)!;
             Assert.Equals(json.value.Count, 3);
 
             dynamic id = json.value[0].ID.ToString();
@@ -91,7 +91,7 @@ namespace UsingODataIntegrationTests
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
-            dynamic json = JsonConvert.DeserializeObject(responseString);
+            dynamic json = JsonConvert.DeserializeObject(responseString)!;
             Assert.Equals(json.value.Count, 2);
 
             dynamic id = json.value[0].ID.ToString();
@@ -109,7 +109,7 @@ namespace UsingODataIntegrationTests
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
-            dynamic json = JsonConvert.DeserializeObject(responseString);
+            dynamic json = JsonConvert.DeserializeObject(responseString)!;
             Assert.Equals(json.value.Count, 1);
 
             dynamic id = json.value[0].ID.ToString();
@@ -124,7 +124,7 @@ namespace UsingODataIntegrationTests
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
-            dynamic json = JsonConvert.DeserializeObject(responseString);
+            dynamic json = JsonConvert.DeserializeObject(responseString)!;
             Assert.Equals(json.value.Count, 2);
 
             dynamic id = json.value[0].ID.ToString();
@@ -142,7 +142,7 @@ namespace UsingODataIntegrationTests
             response.EnsureSuccessStatusCode();
 
             var responseString = await response.Content.ReadAsStringAsync();
-            dynamic json = JsonConvert.DeserializeObject(responseString);
+            dynamic json = JsonConvert.DeserializeObject(responseString)!;
             Assert.Equals(json.value.Count, 3);
 
             dynamic id = json.value[0].ID.ToString();
